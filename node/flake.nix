@@ -36,7 +36,8 @@
         {
           default = pkgs.mkShellNoCC {
             packages = with pkgs; [
-              node2nix
+              # TODO: node2nix build fails with "npm: command not found" - fix and re-enable
+              # node2nix
               nodejs
               nodePackages.pnpm
               yarn
