@@ -12,10 +12,10 @@ Here's an example (for the [`rust`](./rust) template):
 
 ```shell
 # Initialize in the current project
-nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#rust"
+nix flake init --template "https://flakehub.com/f/Cody-W-Tucker/dev-templates/*#rust"
 
 # Create a new project
-nix flake new --template "https://flakehub.com/f/the-nix-way/dev-templates/*#rust" ${NEW_PROJECT_DIRECTORY}
+nix flake new --template "https://flakehub.com/f/Cody-W-Tucker/dev-templates/*#rust" ${NEW_PROJECT_DIRECTORY}
 ```
 
 ## How to use the templates
@@ -38,6 +38,7 @@ Once your preferred template has been initialized, you can use the provided shel
 | [Protobuf]              | [`protobuf`](./protobuf/)     |
 | [Python]                | [`python`](./python/)         |
 | [Ruby]                  | [`ruby`](./ruby/)             |
+| [Ruby on Rails]         | [`ruby-on-rails`](./ruby-on-rails/) |
 | [Rust]                  | [`rust`](./rust/)             |
 | Shell                   | [`shell`](./shell/)           |
 | [SWI-prolog]            | [`swi-prolog`](./swi-prolog/) |
@@ -97,6 +98,14 @@ A dev template that's fully customizable.
 
 - [Ruby], plus the standard Ruby tools (`bundle`, `gem`, etc.)
 
+### [`ruby-on-rails`](./ruby-on-rails/)
+
+- [Ruby on Rails] with reproducible gem management via [ruby-nix]
+- Ruby 3.3.1 (configurable via [nixpkgs-ruby])
+- [bundix] - tool to generate `gemset.nix` from `Gemfile.lock`
+- [yarn]
+- [rufo] (Ruby formatter)
+
 ### [`rust`](./rust/)
 
 - [Rust], including [cargo], [Clippy], and the other standard tools. The Rust version is determined as follows, in order:
@@ -129,6 +138,7 @@ A dev template that's fully customizable.
 [cargo]: https://doc.rust-lang.org/cargo
 [cargo-deny]: https://crates.io/crates/cargo-deny
 [cargo-edit]: https://crates.io/crates/cargo-edit
+[bundix]: https://github.com/inscapist/bundix
 [clippy]: https://github.com/rust-lang/rust-clippy
 [dhall-to-nix]: https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-nix
 [dotnet]: https://dotnet.microsoft.com/en-us
@@ -148,6 +158,7 @@ A dev template that's fully customizable.
 [nix]: https://nixos.org
 [nixfmt]: https://github.com/serokell/nixfmt
 [nix-direnv]: https://github.com/nix-community/nix-direnv
+[nixpkgs-ruby]: https://github.com/bobvanderlinden/nixpkgs-ruby
 [node]: https://nodejs.org
 [node2nix]: https://github.com/svanderburg/node2nix
 [npm]: https://npmjs.org
@@ -161,6 +172,10 @@ A dev template that's fully customizable.
 [python]: https://python.org
 [rust]: https://rust-lang.org
 [rust-analyzer]: https://rust-analyzer.github.io
+[ruby]: https://www.ruby-lang.org
+[ruby-nix]: https://github.com/inscapist/ruby-nix
+[ruby on rails]: https://rubyonrails.org
+[rufo]: https://github.com/ruby-formatter/rufo
 [scala]: https://scala-lang.org
 [shellcheck]: https://shellcheck.net
 [statix]: https://github.com/nerdypepper/statix
