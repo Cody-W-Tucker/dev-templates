@@ -30,6 +30,7 @@ Once your preferred template has been initialized, you can use the provided shel
 | Language/framework/tool | Template                      |
 | :---------------------- | :---------------------------- |
 | [Bun]                   | [`bun`](./bun/)               |
+| [Elixir]                | [`elixir`](./elixir/)         |
 | Empty (change at will)  | [`empty`](./empty)            |
 | [Go]                    | [`go`](./go/)                 |
 | [Jupyter]               | [`jupyter`](./jupyter/)       |
@@ -55,6 +56,18 @@ The sections below list what each template includes. In all cases, you're free t
 ### [Empty](./empty/)
 
 A dev template that's fully customizable.
+
+### [`elixir`](./elixir/)
+
+- [Elixir] 1.17
+- [Erlang]/OTP 27 (BEAM)
+- Standard Elixir tools ([mix], [IEx], [rebar3], and others)
+- [git] (for fetching Mix dependencies)
+- [Node.js][node] 20 (for Phoenix assets)
+- [Gigalixir] (Linux only)
+- [inotify-tools] (Linux only)
+- [libnotify] (Linux only)
+- [terminal-notifier] (macOS only)
 
 ### [`go`](./go/)
 
@@ -143,14 +156,18 @@ A dev template that's fully customizable.
 [dhall-to-nix]: https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-nix
 [dotnet]: https://dotnet.microsoft.com/en-us
 [elixir]: https://elixir-lang.org
+[erlang]: https://www.erlang.org
 [gigalixir]: https://gigalixir.com
+[git]: https://git-scm.com
 [go]: https://go.dev
 [godoc]: https://pkg.go.dev/golang.org/x/tools/cmd/godoc
 [goimports]: https://pkg.go.dev/golang.org/x/tools/cmd/goimports
 [golangci-lint]: https://github.com/golangci/golangci-lint
 [iex]: https://hexdocs.pm/iex/IEx.html
+[inotify-tools]: https://github.com/inotify-tools/inotify-tools
 [jq]: https://jqlang.github.io/jq
 [jupyter]: https://jupyter.org
+[libnotify]: https://gnome.pages.gitlab.gnome.org/libnotify/
 [lorri]: https://github.com/target/lorri
 [maven]: https://maven.apache.org
 [mix]: https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html
@@ -181,6 +198,7 @@ A dev template that's fully customizable.
 [statix]: https://github.com/nerdypepper/statix
 [swi-prolog]: https://www.swi-prolog.org
 [swift]: https://swift.org
+[terminal-notifier]: https://github.com/julienXX/terminal-notifier
 [typst]: https://typst.app
 [vulnix]: https://github.com/flyingcircusio/vulnix
 [yarn]: https://yarnpkg.com
