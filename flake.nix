@@ -31,6 +31,10 @@
               getSystem = "SYSTEM=$(nix eval --impure --raw --expr 'builtins.currentSystem')";
               forEachDir = exec: ''
                 for dir in */; do
+                  # Skip result symlinks from previous builds
+                  if [ "''${dir}" = "result/" ] || [ "''${dir}" = "result" ]; then
+                    continue
+                  fi
                   (
                     cd "''${dir}"
 
@@ -117,6 +121,11 @@
           bun = {
             path = ./bun;
             description = "Bun development environment";
+          };
+
+          elixir = {
+            path = ./elixir;
+            description = "Elixir development environment";
           };
 
           empty = {
