@@ -36,10 +36,14 @@
       devShells = forEachSupportedSystem (
         { pkgs }:
         let
-          mkScript = name: file:
+          mkScript =
+            name: file:
             pkgs.writeShellApplication {
               inherit name;
-              bashOptions = [ "errexit" "pipefail" ];
+              bashOptions = [
+                "errexit"
+                "pipefail"
+              ];
               text = builtins.readFile file;
             };
 
