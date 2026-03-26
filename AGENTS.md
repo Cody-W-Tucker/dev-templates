@@ -25,6 +25,8 @@ direnv allow
 | `format` | Format all `*.nix` files using nixfmt |
 | `check-formatting` | Verify all nix files are properly formatted |
 
+`nix flake update` needs to be ran if nixpkgs version in flake.lock is over 30 days old/
+
 ### Testing a Single Template
 
 To build/test a specific template:
