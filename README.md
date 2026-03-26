@@ -29,6 +29,7 @@ Once your preferred template has been initialized, you can use the provided shel
 
 | Language/framework/tool | Template                      |
 | :---------------------- | :---------------------------- |
+| [Astro]                 | [`astro`](./astro/)           |
 | [Bun]                   | [`bun`](./bun/)               |
 | [Elixir]                | [`elixir`](./elixir/)         |
 | Empty (change at will)  | [`empty`](./empty)            |
@@ -48,6 +49,13 @@ Once your preferred template has been initialized, you can use the provided shel
 ## Template contents
 
 The sections below list what each template includes. In all cases, you're free to add and remove packages as you see fit; the templates are just boilerplate.
+
+### [`astro`](./astro/)
+
+- [Node.js][node]
+- [pnpm]
+- [Yarn]
+- [git]
 
 ### [`bun`](./bun/)
 
@@ -174,6 +182,7 @@ A dev template that's fully customizable.
 [niv]: https://github.com/nmattia/niv
 [nix]: https://nixos.org
 [nixfmt]: https://github.com/serokell/nixfmt
+[astro]: https://astro.build
 [nix-direnv]: https://github.com/nix-community/nix-direnv
 [nixpkgs-ruby]: https://github.com/bobvanderlinden/nixpkgs-ruby
 [node]: https://nodejs.org

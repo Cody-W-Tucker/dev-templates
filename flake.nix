@@ -118,6 +118,11 @@
         templates = rec {
           default = empty;
 
+          astro = {
+            path = ./astro;
+            description = "Astro development environment";
+          };
+
           bun = {
             path = ./bun;
             description = "Bun development environment";
