@@ -28,8 +28,15 @@
       bundix,
       bob-ruby,
     }:
+    let
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+    in
     with fu.lib;
-    eachDefaultSystem (
+    eachSystem supportedSystems (
       system:
       let
         pkgs = import nixpkgs {
