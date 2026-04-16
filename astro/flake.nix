@@ -52,7 +52,7 @@
           default = pkgs.mkShellNoCC {
             packages = with pkgs; [
               nodejs
-              nodePackages.pnpm
+              pnpm
               yarn
               git
               astro-init

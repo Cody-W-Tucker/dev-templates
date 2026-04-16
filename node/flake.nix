@@ -38,7 +38,7 @@
               # TODO: node2nix build fails with "npm: command not found" - fix and re-enable
               # node2nix
               nodejs
-              nodePackages.pnpm
+              pnpm
               yarn
             ];
           };

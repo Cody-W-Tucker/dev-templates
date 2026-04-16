@@ -56,6 +56,7 @@ The sections below list what each template includes. In all cases, you're free t
 - [pnpm]
 - [Yarn]
 - [git]
+- `astro-init` bootstraps Astro with [Tailwind CSS](https://tailwindcss.com) and the Typography plugin
 
 ### [`bun`](./bun/)
 

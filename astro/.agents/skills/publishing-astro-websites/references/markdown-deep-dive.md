@@ -118,7 +118,6 @@ const b = 2;
 const c = 3;
 const d = 4;
 ```
-````
 
 <!-- Highlight with markers -->
 
@@ -128,18 +127,16 @@ const modified = 2; // highlighted
 const added = 3; // green (inserted)
 const removed = 4; // red (deleted)
 ```
-
 ````
 
 ### Code Block Titles
 
-```markdown
+````markdown
 ```js title="src/utils/helper.js"
 export function helper() {
-  return 'Hello';
+  return "Hello";
 }
-````
-
+```
 ````
 
 ## MDX Integration
@@ -148,7 +145,7 @@ Install and configure:
 
 ```bash
 npx astro add mdx
-````
+```
 
 ```javascript
 // astro.config.mjs
@@ -274,7 +271,7 @@ const { Content, headings } = await post.render();
     {headings
       .filter(h => h.depth <= 3)
       .map(h => (
-        <li style={`margin-left: ${(h.depth - 2) * 1rem}`}>
+        <li style={`margin-left: ${h.depth - 2}rem`}>
           <a href={`#${h.slug}`}>{h.text}</a>
         </li>
       ))

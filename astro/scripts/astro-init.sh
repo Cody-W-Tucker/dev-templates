@@ -30,6 +30,24 @@ else
   npm create astro@latest . -- --template minimal --install --git --typescript strict --skip-houston 2>/dev/null
 fi
 
+npm exec -- astro add tailwind --yes
+
+npm install -D @tailwindcss/typography
+
+node -e '
+const fs = require("fs");
+const globalCssPath = "src/styles/global.css";
+
+if (fs.existsSync(globalCssPath)) {
+  const pluginLine = "@plugin '@tailwindcss/typography';";
+  const css = fs.readFileSync(globalCssPath, "utf8");
+
+  if (!css.includes(pluginLine)) {
+    fs.writeFileSync(globalCssPath, `${css.trimEnd()}\n${pluginLine}\n`);
+  }
+}
+'
+
 npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-astro prettier prettier-plugin-astro husky lint-staged
 
 cat > eslint.config.mjs << 'EOF'
@@ -84,8 +102,14 @@ pkg["lint-staged"] = {
 fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n");
 '
 
-npx husky init
-echo 'npx lint-staged' > .husky/pre-commit
+npm exec husky init
+cat > .husky/pre-commit << 'EOF'
+if command -v lint-staged >/dev/null 2>&1; then
+  exec lint-staged
+fi
+
+exec nix develop --command npm exec lint-staged
+EOF
 chmod +x .husky/pre-commit
 
 # Add astro-specific direnv config to .envrc (append if exists, create if not)
@@ -105,4 +129,4 @@ fi
 EOF
 fi
 
-echo "Astro project ready with agency standards"
+echo "Astro project ready with Tailwind CSS and agency standards"
