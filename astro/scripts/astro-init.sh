@@ -16,7 +16,7 @@ if [ -n "$(ls -A . 2>/dev/null)" ]; then
   mkdir -p "$TEMP_DIR"
   
   # Run astro create in temp directory
-  (cd "$TEMP_DIR" && npm create astro@latest . -- --template minimal --install --git --typescript strict --skip-houston 2>/dev/null)
+  (cd "$TEMP_DIR" && npm create astro@latest . -- --template minimal --install --typescript strict --skip-houston 2>/dev/null)
   
   # Move everything from temp to current directory
   shopt -s dotglob
@@ -27,14 +27,14 @@ if [ -n "$(ls -A . 2>/dev/null)" ]; then
   rmdir "$TEMP_DIR"
 else
   # Directory is empty, run normally
-  npm create astro@latest . -- --template minimal --install --git --typescript strict --skip-houston 2>/dev/null
+  npm create astro@latest . -- --template minimal --install --typescript strict --skip-houston 2>/dev/null
 fi
 
 npm exec -- astro add tailwind --yes
 
 npm install -D @tailwindcss/typography
 
-node -e '
+node <<'EOF'
 const fs = require("fs");
 const globalCssPath = "src/styles/global.css";
 
@@ -46,7 +46,7 @@ if (fs.existsSync(globalCssPath)) {
     fs.writeFileSync(globalCssPath, `${css.trimEnd()}\n${pluginLine}\n`);
   }
 }
-'
+EOF
 
 npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-astro prettier prettier-plugin-astro husky lint-staged
 

@@ -104,7 +104,7 @@
                 --experimental-features 'nix-command flakes' \
                 flake init \
                 --template \
-                "https://flakehub.com/f/the-nix-way/dev-templates/0.1#''${TEMPLATE}"
+                "https://flakehub.com/f/Cody-W-Tucker/dev-templates/0.1#''${TEMPLATE}"
             '';
           };
         }
