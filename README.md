@@ -36,6 +36,7 @@ Once your preferred template has been initialized, you can use the provided shel
 | [Go]                    | [`go`](./go/)                 |
 | [Jupyter]               | [`jupyter`](./jupyter/)       |
 | [Nix]                   | [`nix`](./nix/)               |
+| [Next.js]               | [`nextjs`](./nextjs/)         |
 | [Node.js][node]         | [`node`](./node/)             |
 | [Protobuf]              | [`protobuf`](./protobuf/)     |
 | [Python]                | [`python`](./python/)         |
@@ -97,6 +98,15 @@ A dev template that's fully customizable.
 - [nixfmt]
 - [statix]
 - [vulnix]
+
+### [`nextjs`](./nextjs/)
+
+- [Node.js][node]
+- [pnpm]
+- [Yarn]
+- [git]
+- `nextjs-init` bootstraps Next.js with TypeScript, Tailwind CSS, ESLint, Prettier, Husky, and lint-staged
+- Agent guidance via `AGENTS.md`, `CLAUDE.md`, and `next-best-practices` from [vercel-labs/next-skills]
 
 ### [`node`](./node/)
 
@@ -186,6 +196,7 @@ A dev template that's fully customizable.
 [astro]: https://astro.build
 [nix-direnv]: https://github.com/nix-community/nix-direnv
 [nixpkgs-ruby]: https://github.com/bobvanderlinden/nixpkgs-ruby
+[next.js]: https://nextjs.org
 [node]: https://nodejs.org
 [node2nix]: https://github.com/svanderburg/node2nix
 [npm]: https://npmjs.org
@@ -210,6 +221,7 @@ A dev template that's fully customizable.
 [swift]: https://swift.org
 [terminal-notifier]: https://github.com/julienXX/terminal-notifier
 [typst]: https://typst.app
+[vercel-labs/next-skills]: https://github.com/vercel-labs/next-skills
 [vulnix]: https://github.com/flyingcircusio/vulnix
 [yarn]: https://yarnpkg.com
 [vlang]: https://vlang.io

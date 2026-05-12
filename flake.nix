@@ -152,6 +152,11 @@
             description = "Nix development environment";
           };
 
+          nextjs = {
+            path = ./nextjs;
+            description = "Next.js development environment";
+          };
+
           node = {
             path = ./node;
             description = "Node.js development environment";
